@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Comment;
+use App\Mail\PostComment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PostCommentController extends Controller
 {
@@ -19,6 +21,8 @@ class PostCommentController extends Controller
             'comment' => $request->comment,
             'user_id' => $request->user()->id
         ]);
+
+        Mail::to($post->user)->send(new PostComment(auth()->user(), $post));
 
         return back();
     }

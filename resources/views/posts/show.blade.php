@@ -24,7 +24,7 @@
                 @if($comments->count())
                     @foreach ($comments as $comment)
                     <div class="border-b text-sm p-3 mt-2 rounded-lg">
-                        <a href="{{ route('user.posts', $post->user) }}" class="font-bold text-md">{{ $comment->user->name }}</a>
+                        <a href="{{ route('user.posts', $comment->user) }}" class="font-bold text-md">{{ $comment->user->name }}</a>
                         <p>{{ $comment->comment }}</p>
                         @auth
                             @can('deleteComment', $comment)
