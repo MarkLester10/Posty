@@ -2,9 +2,9 @@
 
 
 @section('content')
- <div class="container mx-auto py-6">
-    <div class="flex justify-center">
-        <div class="w-8/12 bg-white p-6 rounded-lg">
+<div class="container mx-auto py-6">
+    <div class="flex justify-center p-3">
+        <div class="w-full md:w-4/5 bg-white p-6 rounded-lg">
             <x-post :post="$post"/>
 
             <form action="{{ route('posts.comment', $post) }}" method="post" class="mt-4 items-center">

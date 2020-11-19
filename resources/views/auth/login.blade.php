@@ -2,10 +2,13 @@
 
 
 @section('content')
-    <div class="flex justify-center mt-6">
-        <div class="w-4/12 bg-white p-6 rounded-lg">
+<div class="container mx-auto py-6">
+    <div class="flex justify-center">
+        <div class="w-full md:w-5/12 bg-white p-6">
             @if(session('status'))
-                <div class="border-2 border-red-700 bg-red-500 text-center text-white p-4 w-full rounded-lg mb-4">{{ session('status') }}</div>
+                <div class="border-2 border-red-700 bg-red-500 text-center text-white p-4 w-full rounded-lg mb-4">
+                    {{ session('status') }}
+                </div>
             @endif
             <form action="{{ route('login') }}" method="post">
                 @csrf
@@ -39,4 +42,5 @@
             </form>
         </div>
     </div>
+</div>
 @endsection
