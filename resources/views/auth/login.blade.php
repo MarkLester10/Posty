@@ -2,9 +2,9 @@
 
 
 @section('content')
-<div class="container mx-auto py-6">
-    <div class="flex justify-center">
-        <div class="w-full md:w-5/12 bg-white p-6">
+    <div class="container mx-auto py-6">
+        <div class="flex justify-center p-3">
+            <div class="w-full md:w-5/12 bg-white p-6 rounded-lg">
             @if(session('status'))
                 <div class="border-2 border-red-700 bg-red-500 text-center text-white p-4 w-full rounded-lg mb-4">
                     {{ session('status') }}
