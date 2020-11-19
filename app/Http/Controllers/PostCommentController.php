@@ -22,7 +22,7 @@ class PostCommentController extends Controller
             'user_id' => $request->user()->id
         ]);
 
-        Mail::to($post->user)->send(new PostComment(auth()->user(), $post));
+        // Mail::to($post->user)->send(new PostComment(auth()->user(), $post));
 
         return back();
     }
